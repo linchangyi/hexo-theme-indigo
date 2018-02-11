@@ -1,6 +1,6 @@
 <%- partial('_partial/header', {
-    title: page.title,
-    hdClass: 'page-header'
+    title: page.title?page.title:config.title,
+    hdClass: 'index-header'
 }) %>
 <%
 page.reward = 'reward' in page ? (theme.reward && page.reward) : theme.reward;
