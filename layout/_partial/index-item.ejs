@@ -13,7 +13,7 @@
     <% if(theme.excerpt_render) { %>
         <%- post.excerpt || post.content %>
     <% } else { %>
-        <%- post.excerpt ? strip_html(post.excerpt) : truncate(strip_html(post.content), {
+        <%- post.excerpt ? post.excerpt : truncate(strip_html(post.content), {
             length: theme.excerpt_length
         }) %>
     <% } %>
