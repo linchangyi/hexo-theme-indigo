@@ -140,7 +140,7 @@ canonical: lincy.online
 since_year: 2017
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: false
+about: 非典型九零后，四体不勤，五谷不分。幸天资未泯，颇悉Java，略通Python，历行KISS、DRY诸原则。得此良处，随性而记，偶发牢骚。
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter: false
