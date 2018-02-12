@@ -31,8 +31,9 @@
                 <%- partial('post/head-meta') %>
             <% } else if(is_home()){ %>
                 <%- config.subtitle %>
-            <% } else if (page.layout === 'page' && page.description) {%>
-                <%- page.description %>
+            <% } else if (page.layout === 'page') {%>
+
+                <%- page.discription?page.discription:config.subtitle %>
             <% } %>
         </h5>
     </div>
