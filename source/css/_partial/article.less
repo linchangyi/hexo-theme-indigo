@@ -30,7 +30,7 @@
         padding: 0 0 10px 20px;
         font-size: 15px;
         font-weight: 600;
-        color: #727272;
+        color: lightgrey;
     }
 }
 .post-toc-child {
@@ -39,6 +39,7 @@
 .post-toc {
     display: inline-block;
     padding: 0;
+    color: lightgray;
     font-size: 13px;
     >.post-toc-item {
         position: relative;
@@ -46,18 +47,17 @@
 }
 .post-toc-item {
     font-weight: 400;
-    color: @secondaryTextColor;
 
     &.active {
         >.post-toc-link {
             font-weight: 600;
-            color: @primaryColor;
+            color: grey;
             &:before {
                 background: rgba(0, 0, 0, .06);
             }
 
             &:after {
-                border-left: 3px solid @primaryColor;
+                border-left: 3px grey;
             }
         }
     }
@@ -72,6 +72,7 @@
     word-break: break-all;
 
     &:hover {
+        color: grey;
         opacity: .8;
     }
 
