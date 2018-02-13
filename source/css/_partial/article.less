@@ -39,7 +39,10 @@
 .post-toc {
     display: inline-block;
     padding: 0;
-    color: lightgray;
+    color: @tocColor;
+    &:hover {
+        color:black;
+    }
     font-size: 13px;
     >.post-toc-item {
         position: relative;
@@ -51,13 +54,12 @@
     &.active {
         >.post-toc-link {
             font-weight: 600;
-            color: grey;
             &:before {
                 background: rgba(0, 0, 0, .06);
             }
 
             &:after {
-                border-left: 3px grey;
+                border-left: 3px;
             }
         }
     }
@@ -72,7 +74,7 @@
     word-break: break-all;
 
     &:hover {
-        color: grey;
+        color: black;
         opacity: .8;
     }
 
@@ -88,10 +90,6 @@
     }
 }
 
-.post-toc-shrink {
-    height: 0;
-    overflow-y: hidden;
-}
 
 .post-toc-expand {
     height: auto;

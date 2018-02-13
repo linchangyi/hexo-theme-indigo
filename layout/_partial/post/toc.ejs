@@ -11,5 +11,13 @@
             <%- topic %>
         </nav>
     </aside>
+    <% if(theme.toc_shrink) { %>
+        <style type="css">
+            .post-toc-shrink {
+                height: 0;
+                overflow-y: hidden;
+            }
+        </style>
+    <% } %>
 <% }
 } %>
