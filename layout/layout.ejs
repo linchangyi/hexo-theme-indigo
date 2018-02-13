@@ -10,11 +10,11 @@
     </main>
     <%- partial('_partial/after-footer') %>
     <%- partial('_partial/script') %>
-    <%- if(theme.canvas_nest) {%>
+    <% if(theme.canvas_nest) {%>
         <script src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
-    <%- } %>
-    <%- if(theme.ribbon) {%>
+    <% } %>
+    <% if(theme.ribbon) {%>
         <script type="text/javascript" alpha="0.2" src="http://cdn.atool.org/res/ribbon.min.js"></script>
-    <%- } %>
+    <% } %>
 </body>
 </html>
