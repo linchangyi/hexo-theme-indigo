@@ -37,6 +37,7 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=<%-theme.cnzz %>&web_id=<%-theme.
         $.ajax({
             url: '//' + disqus_shortname + '.disqus.com/embed.js',
             dataType: "script",
+            timeout: 3000,
             success: function(){
                 <% if(is_post()){ %>
                 $('#comments').addClass('post-comments-card');
