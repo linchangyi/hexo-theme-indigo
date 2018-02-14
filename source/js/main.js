@@ -95,8 +95,6 @@
                 } else {
                     root.classList.remove('lock');
                 }
-                this.enableTopMenu();
-                window.localStorage.setItem('hide_menu',1);
             }
         },
         fixedHeader: function (top) {
