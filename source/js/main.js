@@ -84,6 +84,7 @@
                     }
                 }
                 this.disableTopMenu();
+                window.localStorage.setItem('hide_menu',0);
             } else {
                 menu.classList.remove('show');
                 mask.classList.remove('in');
@@ -95,6 +96,7 @@
                     root.classList.remove('lock');
                 }
                 this.enableTopMenu();
+                window.localStorage.setItem('hide_menu',1);
             }
         },
         fixedHeader: function (top) {
@@ -506,6 +508,7 @@
     menuOff.addEventListener(even, function () {
         menu.classList.add('hide');
         Blog.enableTopMenu();
+        window.localStorage.setItem('hide_menu',1);
     }, false);
 
     mask.addEventListener(even, function (e) {
