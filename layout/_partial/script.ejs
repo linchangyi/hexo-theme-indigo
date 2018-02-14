@@ -30,7 +30,7 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=<%-theme.cnzz %>&web_id=<%-theme.
 <script src="<%- url_for(theme_js('/js/search', cache)) %>" async></script>
 <% } %>
 
-<% if(theme.disqus_shortname) { %>
+<% if(theme.disqus_shortname && (is_post()||page.layout==='page') && page.comments) { %>
     <script type="text/javascript">
         var disqus_shortname = '<%- theme.disqus_shortname %>';
     // lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
@@ -43,6 +43,7 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=<%-theme.cnzz %>&web_id=<%-theme.
         });
     </script>
 <% } %>
+
 <%- partial('plugins/mathjax') %>
 
 <% if (theme.visit_counter) { %>
