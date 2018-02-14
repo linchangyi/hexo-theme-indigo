@@ -3,7 +3,21 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis"><%=title %></div>
+        <div class="top-menu <% if(theme.hideMenu){ %> enable <% } else { %> disable <% } %>" id="top-menu">
+            <%
+            var menuItem, isActive = function(item) {
+                var pageUrl = url_for(page.path)
+                return item.url === '/' ? pageUrl === url_for(item.url + 'index.html') : _.startsWith(pageUrl, url_for(item.url))
+            };
+            for (var i in theme.menu) {
+                menuItem = theme.menu[i];
+            %>
+                <a href="<%- url_for(menuItem.url) %>" class="header-icon waves-effect waves-circle waves-light on">
+                    <i class="icon icon-lg icon-<%= i %>"></i>
+                </a>
+            <% } %>
+        </div>
+        <span class="flex-col header-title ellipsis"><%=title %></span>
         <% if(theme.search){ %>
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
