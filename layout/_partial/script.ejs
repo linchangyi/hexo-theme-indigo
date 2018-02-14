@@ -14,7 +14,7 @@
         }
     })();
 </script>
-
+<script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var BLOG = { ROOT: '<%= config.root %>', SHARE: <%- theme.share %>, REWARD: <%- Boolean(page.reward) %> };
@@ -30,6 +30,19 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=<%-theme.cnzz %>&web_id=<%-theme.
 <script src="<%- url_for(theme_js('/js/search', cache)) %>" async></script>
 <% } %>
 
+<% if(theme.disqus_shortname) { %>
+    <script type="text/javascript">
+        var disqus_shortname = '<%- theme.disqus_shortname %>';
+    // lazyScripts.push('//' + disqus_shortname + '.disqus.com/embed.js')
+        $.ajax({
+            url: '//' + disqus_shortname + '.disqus.com/embed.js',
+            dataType: "script",
+            success: function(){
+                $('#comments').addClass('comments-card');
+            }
+        });
+    </script>
+<% } %>
 <%- partial('plugins/mathjax') %>
 
 <% if (theme.visit_counter) { %>
