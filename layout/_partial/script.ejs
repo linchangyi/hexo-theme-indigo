@@ -38,7 +38,11 @@ lazyScripts.push('//s95.cnzz.com/z_stat.php?id=<%-theme.cnzz %>&web_id=<%-theme.
             url: '//' + disqus_shortname + '.disqus.com/embed.js',
             dataType: "script",
             success: function(){
-                $('#comments').addClass('comments-card');
+                <% if(is_post()){ %>
+                $('#comments').addClass('post-comments-card');
+                <%} else {%>
+                $('#comments').addClass('page-comments-card');
+                <% } %>
             }
         });
     </script>
