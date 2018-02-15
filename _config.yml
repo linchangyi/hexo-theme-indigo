@@ -102,7 +102,7 @@ less:
 
 # 以下评论插件开启一个即可
 # 是否开启 disqus
-disqus_shortname: false
+disqus_shortname: true
 # 是否开启友言评论, 填写友言用户id
 uyan_uid: false
 # 是否使用 gitment，https://github.com/imsun/gitment
@@ -118,11 +118,11 @@ livere_id: false
 
 # Valine Comment system. https://valine.js.org
 valine:
-  enable: true # 如果你想使用valine，请将值设置为 true
+  enable: false # 如果你想使用valine，请将值设置为 true
   appId:  dBU9X0bDXv6rtTr792RUNDBK-gzGzoHsz
   appKey:  7VpowGq5aM7pwR7eEOPOMjYK
-  notify: talentlcy@hotmail.com
-  verify: false # Verify code
+  notify: true
+  verify: true # Verify code
   avatar: identicon # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
   placeholder: 说点什么？  # Comment Box placeholder
   guest_info: nick,mail # Comment header info
