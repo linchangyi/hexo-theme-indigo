@@ -161,7 +161,7 @@ lightbox: true
 ICP_license: false
 
 # 背景效果
-canvas_nest: true
+canvas_nest: false
 ribbon: true
 
 # 文章目录折叠
