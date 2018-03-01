@@ -6,8 +6,6 @@
     color: @textPrimaryColor;
     height: @headerH;
     background: @primaryColor;
-    -webkit-transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
-    transition: padding-left .6s ease-in-out, background-color .3s cubic-bezier(.4, 0, .2, 1), box-shadow .15s linear;
     z-index: 30;
 
     &.fixed {
@@ -22,7 +20,6 @@
     .top-menu {
         height: @headerH;
         width: 100%;
-        background: @transparancy;
         &.disable {
             a {
                 display:none;
@@ -30,6 +27,20 @@
         }
     }
 
+}
+
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+.headroom--not-top .header-title {
+    visibility: visible;
 }
 
 .header-icon {
