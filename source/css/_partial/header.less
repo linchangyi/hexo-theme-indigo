@@ -39,9 +39,6 @@
 .headroom--unpinned {
     transform: translateY(-100%);
 }
-.headroom--not-top .header-title {
-    visibility: visible;
-}
 
 .header-icon {
     width: @headerH;
@@ -59,7 +56,9 @@
     position:absolute;
     margin: auto;
     left:400px;right:400px;top:0;bottom:0;
-    visibility: hidden;
+    &.hidden {
+        visibility: hidden;
+    }
     font-weight: 400;
     line-height: 56px;
     font-size: 16px;
