@@ -4,9 +4,11 @@
 }) %>
 <div class="container body-wrap fade">
     <div class="waterfall">
-        <% page.posts.each(function(post){ %>
-            <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
-        <% }) %>
+        <% if(is_category()){ 
+            page.posts.each(function(post){ %>
+                <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
+            <%}) 
+        }%>
     </div>
     <%- partial('_partial/paginator') %>
 </div>
