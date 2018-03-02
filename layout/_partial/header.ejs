@@ -5,14 +5,10 @@
             <i class="icon icon-lg icon-navicon"></i>
             </a>
             <%
-            var menuItem, isActive = function(item) {
-                var pageUrl = url_for(page.path)
-                return item.url === '/' ? pageUrl === url_for(item.url + 'index.html') : _.startsWith(pageUrl, url_for(item.url))
-            };
             for (var i in theme.menu) {
                 menuItem = theme.menu[i];
             %>
-                <a href="<%- url_for(menuItem.url) %>" class="header-icon waves-effect waves-circle waves-light on">
+                <a href="<%- url_for(menuItem.url) %>"title="<%- menuItem.text %>" class="header-icon waves-effect waves-circle waves-light on">
                     <i class="icon icon-lg icon-<%= i %>"></i>
                 </a>
             <% } %>

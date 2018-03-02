@@ -12,13 +12,16 @@ menu:
     text: Home
     url: /
   archives:
+    text: Archieves
     url: /archives
   th-list:
     text: Categories
-    url: /categories
+    url: /categories/技术
   tags:
+    text: Tags
     url: /tags
   github:
+    text: Github
     url: https://github.com/linchangyi
     target: _blank
   # weibo:

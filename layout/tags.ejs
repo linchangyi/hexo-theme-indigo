@@ -12,23 +12,16 @@
 
         <% }) %>
             </div>
-        <% } else {
-            site.tags.each(function(tag){
-                if(tag.length){
-            %>
-
-            <h3 class="archive-separator" id="tag-<%=tag.name %>"><%=tag.name %></h3>
-
-            <div class="waterfall">
-            <% tag.posts.each(function(post){  %>
-
-                <%- partial('_partial/archive', {post: post, date_format: config.date_format}) %>
-
-            <% }) %>
-            </div>
-            <% }
-            })
-        }
+        <% } else { %>
+            <%- tagcloud({
+                min_font: 240/site.tags.length, 
+                max_font: 960/site.tags.length, 
+                amount: 999, 
+                color: true, 
+                start_color: 'teal', 
+                end_color: 'yellowgreen',
+            }) %>
+        <% }
     %>
     <%- partial('_partial/paginator') %>
 </div>
