@@ -76,6 +76,9 @@ search: true
 # 是否大屏幕下文章页隐藏导航
 hideMenu: true
 
+# 代码高亮highlight.js样式
+highlight_style: railscasts
+
 # 是否开启toc
 # toc: false
 toc:
