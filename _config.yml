@@ -77,7 +77,7 @@ search: true
 hideMenu: true
 
 # 代码高亮highlight.js样式
-highlight_style: railscasts
+highlight_style: vs
 
 # 是否开启toc
 # toc: false
