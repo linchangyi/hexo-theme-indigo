@@ -35,9 +35,15 @@
 }
 .headroom--pinned {
     transform: translateY(0%);
+    &:not( .headroom--top ){
+        box-shadow: @boxShadow2;
+    }
 }
 .headroom--unpinned {
     transform: translateY(-100%);
+    &:not( .headroom--top ){
+        box-shadow: @boxShadow2;
+    }
 }
 
 .header-icon {
